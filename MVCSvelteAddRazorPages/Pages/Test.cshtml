@@ -1,0 +1,16 @@
+@page
+@attribute [RazorCompiledItemMetadata("RouteTemplate", Urls.TestUrl)]
+
+@model TestModel
+@{
+    ViewData["Title"] = "Test Title";
+    Layout = "_Layout";
+}
+
+@section HeadSection {
+    <link href="~/build/test.css" asp-append-version="true" rel="stylesheet" />
+    <script defer src="~/build/test.js" asp-append-version="true"></script>
+}
+
+
+<input id="Hello" type="hidden" value="@ViewData["Hello"]" />

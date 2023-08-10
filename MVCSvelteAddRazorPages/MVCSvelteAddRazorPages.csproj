@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>aspnet-MVCSvelteAddRazorPages-91329541-6bb2-4547-a755-a5e297782aca</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.7" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.7" />
+	</ItemGroup>
+	<ItemGroup Label="nesting">
+		<None Update="Pages\Test.rollup.config.js">
+			<DependentUpon>Test.cshtml</DependentUpon>
+		</None >
+		<None Update="Pages\Test.entry.ts">
+			<DependentUpon>Test.cshtml</DependentUpon>
+		</None>
+		<None Update="Pages\Unauthorized.rollup.config.js">
+			<DependentUpon>Unauthorized.cshtml</DependentUpon>
+		</None>
+		<None Update="Pages\Unauthorized.entry.ts">
+			<DependentUpon>Unauthorized.cshtml</DependentUpon>
+		</None>
+		<None Update="Pages\NotFound.rollup.config.js">
+			<DependentUpon>NotFound.cshtml</DependentUpon>
+		</None>
+		<None Update="Pages\NotFound.entry.ts">
+			<DependentUpon>NotFound.cshtml</DependentUpon>
+		</None>
+		<None Remove=".vscode\**" />
+	</ItemGroup>
+</Project>

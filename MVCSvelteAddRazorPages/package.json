@@ -1,0 +1,45 @@
+{
+  "name": "mvcsvelteskelet",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "code": "code .",
+    "fe-build-all": "npm run format && npm run lint && node ./Scripts/build-all.js",
+    "fe-build": "node ./Scripts/build.js",
+    "fe-watch": "node ./Scripts/build.js -w",
+    "fe-scss-build": "sass ./App/scss/style.scss ./wwwroot/style.css --no-source-map --style compressed",
+    "build-urls": "dotnet run -- build-urls",
+    "new-page": "node ./Scripts/new-page.js && dotnet run -- build-urls",
+    "format": "prettier --plugin-search-dir . --write .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.60.0",
+    "chart.js": "^4.3.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "path": "^0.12.7",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.0",
+    "rollup": "^3.23.0",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-svelte": "^7.1.4",
+    "svelte": "^3.59.1",
+    "svelte-check": "^3.4.3",
+    "svelte-preprocess": "^5.0.3",
+    "svelte-spa-router": "^3.3.0",
+    "tslib": "^2.5.3",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@tsconfig/svelte": "^5.0.0"
+  }
+}

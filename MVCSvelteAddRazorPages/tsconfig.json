@@ -1,0 +1,34 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+
+  "include": [ "Pages/*", "Pages/**/*", "App/*", "App/**/*" ],
+  "exclude": [
+    "node_modules/*",
+    "__sapper__/*",
+    "public/*",
+    "wwwroot/*",
+    "bin/*",
+    "obj/*",
+    "Properties/*",
+    ".vscode/*"
+  ],
+
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "$lib/*": [ "App/lib/*" ],
+      "$area/*": [ "App/lib/area/*" ],
+      "$charting/*": [ "App/lib/charting/*" ],
+      "$data/*": [ "App/lib/data/*" ],
+      "$element/*": [ "App/lib/element/*" ],
+      "$forms/*": [ "App/lib/forms/*" ],
+      "$overlay/*": [ "App/lib/overlay/*" ],
+      "$layouts/*": [ "App/lib/layouts/*" ],
+      "$visual/*": [ "App/lib/visual/*" ],
+      "$shared/*": [ "App/shared/*" ],
+      "$layout/*": [ "App/lib/layouts/*" ]
+    }
+  }
+}
