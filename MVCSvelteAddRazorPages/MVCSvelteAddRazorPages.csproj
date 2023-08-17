@@ -21,7 +21,7 @@
 	<ItemGroup Label="nesting">
 		<None Update="Pages\Test.rollup.config.js">
 			<DependentUpon>Test.cshtml</DependentUpon>
-		</None >
+		</None>
 		<None Update="Pages\Test.entry.ts">
 			<DependentUpon>Test.cshtml</DependentUpon>
 		</None>

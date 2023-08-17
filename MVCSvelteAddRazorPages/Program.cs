@@ -5,6 +5,7 @@ global using Microsoft.AspNetCore.Razor.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVCSvelteAddRazorPages.Data;
+using MVCSvelteAddRazorPages;
 
 #if DEBUG
 if (MVCSvelteAddRazorPages.Scripts.Scripts.BuildModels(args))
@@ -51,9 +52,11 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseMiddleware<RequestDiagnosticsMiddleware>();
+
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
